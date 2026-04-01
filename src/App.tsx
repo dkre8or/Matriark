@@ -321,7 +321,7 @@ export default function App() {
                 Shaping <span className="text-primary-mid">Influence</span>, Building Legacy.
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-                MATRIARK is a premier women's institute dedicated to fostering inter-influential leadership and cross-cultural collaboration. We empower women to bridge tribal and ethnic divides, building strong professional networks and lasting legacies.
+                MATRIARK is an institute for women committed to building inter-influential relationships across ethnicities and tribes. We connect, develop, and position women for global impact—shaping influence and building legacy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
