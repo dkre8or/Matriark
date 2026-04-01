@@ -162,7 +162,7 @@ const Navbar = ({ onJoinClick }: { onJoinClick: () => void }) => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <div className="flex items-center gap-3">
-              <img src="/logo.svg" alt="MATRIARK Logo" className="w-10 h-10" />
+              <img src="/logo.png" alt="MATRIARK Logo" className="w-12 h-12" />
               <span className="text-2xl font-bold tracking-tighter text-primary-dark">MATRIARK</span>
             </div>
           </div>
@@ -287,26 +287,7 @@ const ProgramCard = ({ title, icon: Icon }: { title: string, icon: any }) => (
   </motion.div>
 );
 
-const TestimonialCard = ({ quote, author, role, image }: { quote: string, author: string, role: string, image: string }) => (
-  <motion.div 
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 relative"
-  >
-    <div className="absolute -top-4 left-8 w-8 h-8 bg-primary-mid text-white rounded-full flex items-center justify-center">
-      <Quote size={16} />
-    </div>
-    <p className="text-gray-600 italic mb-8 leading-relaxed">"{quote}"</p>
-    <div className="flex items-center gap-4">
-      <img src={image} alt={author} className="w-12 h-12 rounded-full object-cover" referrerPolicy="no-referrer" />
-      <div>
-        <h4 className="font-bold text-primary-dark text-sm">{author}</h4>
-        <p className="text-xs text-gray-500">{role}</p>
-      </div>
-    </div>
-  </motion.div>
-);
+// TestimonialCard removed as requested
 
 export default function App() {
   const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
@@ -340,7 +321,7 @@ export default function App() {
                 Shaping <span className="text-primary-mid">Influence</span>, Building Legacy.
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-                A women's institute committed to building inter-influential relationships across ethnicities and tribes. We connect, develop, and position women for global impact.
+                MATRIARK is a premier women's institute dedicated to fostering inter-influential leadership and cross-cultural collaboration. We empower women to bridge tribal and ethnic divides, building strong professional networks and lasting legacies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
@@ -362,40 +343,13 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="flex justify-center items-center"
             >
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                <img 
-                  src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Empowered Nigerian Woman" 
-                  className="w-full h-auto"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              {/* Decorative elements */}
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary-light rounded-full z-0 blur-2xl opacity-50" />
-              <div className="absolute -top-6 -right-6 w-48 h-48 bg-primary-mid rounded-full z-0 blur-3xl opacity-30" />
-              
-              <div className="absolute bottom-8 -right-4 bg-white p-6 rounded-2xl shadow-xl z-20 border border-gray-100 hidden sm:block">
-                <div className="flex items-center gap-4">
-                  <div className="flex -space-x-3">
-                    {[1,2,3,4].map(i => (
-                      <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
-                        <img src={`https://images.unsplash.com/photo-${[
-                          "1531123897727-8f129e1688ce",
-                          "1567532939604-b6b5b0db2604",
-                          "1614644147798-f8c0fc9da7f6",
-                          "1589156280159-27698a70f29e"
-                        ][i-1]}?auto=format&fit=crop&q=80&w=100`} alt="User" referrerPolicy="no-referrer" />
-                      </div>
-                    ))}
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold text-primary-dark">500+ Members</p>
-                    <p className="text-xs text-gray-500">Growing community</p>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="MATRIARK Logo" 
+                className="w-full max-w-md h-auto"
+              />
             </motion.div>
           </div>
         </div>
@@ -446,7 +400,7 @@ export default function App() {
                 className="space-y-4"
               >
                 <div className="rounded-2xl overflow-hidden h-64">
-                  <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=500" alt="Collaboration" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/collaboration_africa.png" alt="Collaboration" className="w-full h-full object-cover" />
                 </div>
                 <div className="bg-primary-dark p-6 rounded-2xl text-white">
                   <p className="text-3xl font-bold mb-1">100%</p>
@@ -465,7 +419,7 @@ export default function App() {
                   <p className="text-sm opacity-80 uppercase tracking-wider">Core Programs</p>
                 </div>
                 <div className="rounded-2xl overflow-hidden h-64">
-                  <img src="https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&q=80&w=500" alt="Mentorship" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="/mentorship_africa.png" alt="Mentorship" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
             </div>
@@ -547,14 +501,14 @@ export default function App() {
                 <div className="w-12 h-12 bg-primary-light text-primary-dark rounded-xl flex items-center justify-center mb-6">
                   <item.icon size={24} />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
                 <p className="text-white/90 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
 
           <div className="mt-20 bg-white/5 p-12 rounded-3xl border border-white/10 text-center">
-            <h3 className="text-2xl font-bold mb-8">What will you build? What will you leave?</h3>
+            <h3 className="text-2xl font-bold mb-8 text-white">What will you build? What will you leave?</h3>
             <div className="flex flex-wrap justify-center gap-6">
               <div className="px-6 py-3 bg-primary-light/10 rounded-full border border-primary-light/20 text-primary-light font-semibold">Intentional Intelligence</div>
               <div className="px-6 py-3 bg-primary-light/10 rounded-full border border-primary-light/20 text-primary-light font-semibold">Strategic Thinking</div>
@@ -640,10 +594,9 @@ export default function App() {
             </div>
             <div className="lg:w-1/2 relative min-h-[400px]">
               <img 
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1000" 
+                src="/unity_africa.png" 
                 alt="Women Unity" 
                 className="absolute inset-0 w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-primary-dark/20" />
             </div>
@@ -704,35 +657,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading subtitle="Hear from the women who are already part of the MATRIARK community and experiencing transformation.">
-            Voices of Impact
-          </SectionHeading>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <TestimonialCard 
-              quote="MATRIARK has provided me with a structured path for leadership that I couldn't find anywhere else. The community is incredibly supportive."
-              author="Amina Bello"
-              role="Tech Entrepreneur"
-              image="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=200"
-            />
-            <TestimonialCard 
-              quote="The inter-tribal summits opened my eyes to the power of collaboration across cultures. We are stronger when we build together."
-              author="Chioma Okoro"
-              role="Social Advocate"
-              image="https://images.unsplash.com/photo-1614644147798-f8c0fc9da7f6?auto=format&fit=crop&q=80&w=200"
-            />
-            <TestimonialCard 
-              quote="Mentorship at MATRIARK is not just advice; it's a partnership for growth. I've seen my influence grow exponentially in just a year."
-              author="Fatima Yusuf"
-              role="Corporate Executive"
-              image="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=200"
-            />
-          </div>
-        </div>
-      </section>
+      {/* Testimonials removed */}
 
       {/* Join the Movement */}
       <section id="join" className="py-24 bg-gray-50">
@@ -849,7 +774,7 @@ export default function App() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <img src="/logo.svg" alt="MATRIARK Logo" className="w-8 h-8 brightness-0 invert" />
+                <img src="/logo.png" alt="MATRIARK Logo" className="w-10 h-10 brightness-0 invert" />
                 <span className="text-2xl font-bold tracking-tighter">MATRIARK</span>
               </div>
               <p className="text-white/70 max-w-sm mb-6">
